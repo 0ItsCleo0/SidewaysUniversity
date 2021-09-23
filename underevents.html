@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sideways University</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="This is a basic website for Sideways University.">
+        <meta name="author" content="Headless">
+        <link type="text/css" rel="stylesheet" href="styles.css">
+    </head>
+    <body class="underground">
+        <div class="theundergroundevents">
+            <img src="resources/TheUnderground.png" alt="SidewaysUniversity"></img>
+        </div>
+        <div class="topnav_events">
+            <a href="index.html">Back To Safety</a>
+            <a href="underevents.html">Events</a>
+            <a href="shop.html">Black Market</a>
+        </div>
+        <div id="wrapper">
+            <table align='center' cellspacing=10 cellpadding=10 id="data_table" border=1>
+            <tr>
+            <th>Type</th>
+            <th>Name</th>
+            <th>Location</th>
+            <th>Class</th>
+            <th>Fee</th>
+            </tr>
+            
+            <tr>
+            <td><input type="text" id="new_type"></td>
+            <td><input type="text" id="new_name"></td>
+            <td><input type="text" id="new_location"></td>
+            <td><input type="text" id="new_car"></td>
+            <td><input type="text" id="new_fee"></td>
+            
+            </tr>
+
+            <tr>
+                <td colspan="5"><input type="button" class="add" onclick="add_row();" value="Add Event"></td>
+            </tr>
+            
+            </table>
+            </div>
+              <script type="text/javascript">
+                function edit_row(no)
+                    {
+                     document.getElementById("edit_button"+no).style.display="none";
+                     document.getElementById("save_button"+no).style.display="block";
+                    
+                     var type=document.getElementById("type_row"+no);
+                     var name=document.getElementById("name_row"+no);
+                     var location=document.getElementById("location_row"+no);
+                     var car=document.getElementById("car_row"+no);
+                     var fee=document.getElementById("fee_row"+no);
+                    
+                     var type_data=type.innerHTML;
+                     var name_data=name.innerHTML;
+                     var location_data=location.innerHTML;
+                     var car_data=car.innerHTML;
+                     var fee_data=fee.innerHTML;
+                    
+                     type.innerHTML="<input type='text' id='type_text"+no+"' value='"+type_data+"'>";
+                     name.innerHTML="<input type='text' id='name_text"+no+"' value='"+name_data+"'>";
+                     location.innerHTML="<input type='text' id='location_text"+no+"' value='"+location_data+"'>";
+                     car.innerHTML="<input type='text' id='car_text"+no+"' value='"+car_data+"'>";
+                     fee.innerHTML="<input type='text' id='fee_text"+no+"' value='"+fee_data+"'>";
+                    }
+
+                    function save_row(no)
+                    {
+                     var type_val=document.getElementById("type_text"+no).value;
+                     var name_val=document.getElementById("name_text"+no).value;
+                     var location_val=document.getElementById("location_text"+no).value;
+                     var car_val=document.getElementById("car_text"+no).value;
+                     var fee_val=document.getElementById("fee_text"+no).value;
+                    
+                     document.getElementById("type_row"+no).innerHTML=type_val;
+                     document.getElementById("name_row"+no).innerHTML=name_val;
+                     document.getElementById("location_row"+no).innerHTML=location_val;
+                     document.getElementById("car_row"+no).innerHTML=car_val;
+                     document.getElementById("fee_row"+no).innerHTML=fee_val;
+                    
+                     document.getElementById("edit_button"+no).style.display="block";
+                     document.getElementById("save_button"+no).style.display="none";
+                    }
+
+                    function delete_row(no)
+                    {
+                     document.getElementById("row"+no+"").outerHTML="";
+                    }
+
+                    function add_row()
+                    {
+                     var new_type=document.getElementById("new_type").value;
+                     var new_name=document.getElementById("new_name").value;
+                     var new_location=document.getElementById("new_location").value;
+                     var new_car=document.getElementById("new_car").value;
+                     var new_fee=document.getElementById("new_fee").value;
+                    
+                     var table=document.getElementById("data_table");
+                     var table_len=(table.rows.length)-1;
+                     var row = table.insertRow(table_len).outerHTML="<tr id='row"+table_len+"'><td id='type_row"+table_len+"'>"+new_type+"</td><td id='name_row"+table_len+"'>"+new_name+"</td><td id='location_row"+table_len+"'>"+new_location+"</td><td id='car_row"+table_len+"'>"+new_car+"</td><td id='fee_row"+table_len+"'>"+new_fee+"</td><td><input type='button' id='edit_button"+table_len+"' value='Edit' class='edit' onclick='edit_row("+table_len+")'> <input type='button' id='save_button"+table_len+"' value='Save' class='save' onclick='save_row("+table_len+")'> <input type='button' value='Delete' class='delete' onclick='delete_row("+table_len+")'></td></tr>";
+                    
+                     document.getElementById("new_type").value="";
+                     document.getElementById("new_name").value="";
+                     document.getElementById("new_location").value="";
+                     document.getElementById("new_car").value="";
+                     document.getElementById("new_fee").value="";
+                    }
+              </script>
+        
+    </body>
+</html>
