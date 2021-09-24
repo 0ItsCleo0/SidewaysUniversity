@@ -191,18 +191,6 @@
     padding-top: 15px;
 }
 
-.theundergroundevents img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    height: 100px;
-    max-width: 2000px;
-    border-bottom: 5px double white;
-    border-top: 5px double white;
-    padding-bottom: 15px;
-    padding-top: 15px;
-}
-
 .password form {
     display: block;
     text-align: center;
@@ -243,42 +231,6 @@ input[type=password] {
     background-color: #1A1A1A;
     overflow: auto;
 }
-
-.underground .topnav {
-    overflow: hidden;
-    background-color: rgb(0, 0, 0);
-    border-radius: 5px;
-    text-align: center;
-    max-width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 30px;
-    border: 1px solid white;
-    animation-name: afterintro;
-    animation-duration: 5.5s;
-}
-
-.underground .topnav_events {
-    overflow: hidden;
-    background-color: rgb(0, 0, 0);
-    border-radius: 5px;
-    text-align: center;
-    max-width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 30px;
-    border: 1px solid white;
-    margin-top: 15px;
-}
-
-.topnav_events a {
-    display: inline-block;
-    color: white;
-    padding: 14px 16px;
-    text-decoration: none;
-    letter-spacing: 5px;
-}
-
 
 @keyframes undergroundfade {
     from {background-color: rgb(0, 0, 0);}
@@ -392,35 +344,16 @@ input[type=password] {
     margin-top: 15%;
 }
 
-.underground table {
-    font-family: arial, sans-serif;
-    max-width: fit-content;
-    background-color: rgb(0, 0, 0);
-    color: white;
-    border-radius: 20px;
-    margin-top: 15px;
-    overflow: visible;
-}
-
-.underground table th, td {
-    text-align: center;
-    border-radius: 50px;
-    overflow: visible;
-}
-
-.underground table input {
-    background-color: black;
-    border: none;
-    color: white;
-    text-align: center;
-    overflow: visible;
-}
-
 .underground_topnav {
     position: relative;
     animation-name: afterintro;
     animation-duration: 5s;
 }
+
+.underground_topnav2 {
+    position: relative;
+}
+
 .rectangle {
     position: absolute;
     width: 100%;
@@ -455,11 +388,46 @@ input[type=password] {
     color: #af0707;
 }
 
-.row {
-    display: flex;
+.underground form {   
+    position: absolute;
+    text-align: center;
+    margin-top: 300px;
+    margin-left: 30%;
+    margin-right: 30%;
+    font-size: 50px;
+    background-color: #343434;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #343434;
+    color: white;
+    text-align: center;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #af0707;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
   }
-  
-  .column {
-    flex: 33.33%;
-    padding: 5px;
-  }
+
+iframe {
+    position: absolute;
+    top: 100px;
+    margin-left: 1%;
+    overflow: visible;
+}
