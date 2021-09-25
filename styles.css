@@ -1,7 +1,8 @@
 .base{
-    background: url(resources/2cb49653c4594a4cc6b4a949ae2c4415.gif) no-repeat center fixed;
+    background: url(resources/lightbackground.jpg) no-repeat center fixed;
     background-size: cover;
     overflow: auto;
+    zoom: 80%;
 }
 
 .topnav {
@@ -13,8 +14,10 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 15px;
-    border-radius: 30px;
+    border-radius: 20px;
     border: 1px solid white;
+    font-size: 20px;
+    box-shadow: inset 0px 0px 22px 9px rgba(255, 255, 255, 0.212);
 }
 
 .topnav a {
@@ -22,7 +25,7 @@
     color: white;
     padding: 14px 16px;
     text-decoration: none;
-    letter-spacing: 5px;
+    letter-spacing: 10px;
 }
 
 .topnav a:last-child {
@@ -37,7 +40,7 @@
 .topnav a:hover {
     background-color: rgb(255, 255, 255);
     color: black;
-    border-radius: 30px;
+    border-radius: 18px;
     animation-name: fade;
     animation-duration: 0.5s;
 }
@@ -47,13 +50,14 @@
     display: block;
     text-align: center;
     color: white;
-    font-size: large;
+    font-size: 20px;
     margin-top: 15px;
     border: 1px solid white;
     background-color: rgba(51, 51, 51, 0.644);
     max-width: 100%;
     height: auto;
     border-radius: 50px;
+    box-shadow: inset 0px 0px 22px 9px rgba(255, 255, 255, 0.212);
 }
 
 .rx7 img {
@@ -86,13 +90,14 @@
     display: block;
     text-align: center;
     color: white;
-    font-size: large;
+    font-size: 20px;
     margin-top: 15px;
     border: 1px solid white;
     background-color: rgba(51, 51, 51, 0.644);
     max-width: 100%;
     height: auto;
     border-radius: 50px;
+    box-shadow: inset 0px 0px 22px 9px rgba(255, 255, 255, 0.212);
 }
 
 .sentinelsg4 img {
@@ -119,13 +124,14 @@
     display: block;
     text-align: center;
     color: white;
-    font-size: large;
+    font-size: 20px;
     margin-top: 15px;
     border: 1px solid white;
     background-color: rgba(51, 51, 51, 0.644);
     max-width: 100%;
     height: auto;
     border-radius: 50px;
+    box-shadow: inset 0px 0px 22px 9px rgba(255, 255, 255, 0.212);
 }
 
 .s230 img {
@@ -163,8 +169,8 @@
     text-align: center;
     background-color: rgba(51, 51, 51, 0.61);
     border: 1px solid white;
-    border-radius: 50px;
-    margin-top: 15px;
+    border-radius: 10px;
+    margin-top: 100px;
     max-width: fit-content;
     max-height: fit-content;
     margin-left: auto;
@@ -172,7 +178,7 @@
 }
 
 .events_content p {
-    font-size: 100px;
+    font-size: 80px;
     color: white;
     letter-spacing: 5px;
     padding: 10px;
@@ -197,9 +203,26 @@
 }
 
 .undergroundpass {
-    background: url(resources/tumblr_mwwavv8YQV1rpj04no1_500.gif) no-repeat center fixed;
+    background: url(resources/background.png) no-repeat center fixed;
     background-size: cover;
     overflow: auto;
+}
+
+.homepass {
+    background-color: green;
+}
+
+.homepass a:hover {
+    background-color: rgb(0, 0, 0);
+    color: green;
+    border-radius: 18px;
+    animation-name: passfade;
+    animation-duration: 0.5s;
+}
+
+@keyframes passfade {
+    from {background-color: green}
+    to {background-color: black}
 }
 
 .undergroundpass form {
@@ -208,8 +231,9 @@
     max-height: fit-content;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 150px;
+    margin-top: 200px;
     background-color: black;
+    border-radius: 10px;
 }
 
 input[type=password] {
@@ -218,6 +242,7 @@ input[type=password] {
     height: 100px;
     width: 300px;
     border:3px solid green;
+    border-radius: 10px;
     color: green;
     text-decoration: none;
     font-size: 100px;
@@ -227,9 +252,11 @@ input[type=password] {
 }
 
 .underground {
+    background-image: url(resources/background.png);
     background-size: cover;
     background-color: #1A1A1A;
     overflow: auto;
+    zoom: 80%;
 }
 
 @keyframes undergroundfade {
@@ -350,6 +377,10 @@ input[type=password] {
     animation-duration: 5s;
 }
 
+.imgfade:hover {
+    filter: grayscale(100%);
+}
+
 .underground_topnav2 {
     position: relative;
 }
@@ -362,8 +393,9 @@ input[type=password] {
     top: 0px;
     z-index: 0;
     background: #343434;
-    border-radius: 0px 0px 30px 30px;  
+    border-radius: 30px 30px 30px 30px;  
     border: 1px solid #af0707; 
+    box-shadow: inset 0px 0px 22px 9px rgba(0, 0, 0, 0.25);
 }
 
 .underground img {
@@ -430,4 +462,25 @@ iframe {
     top: 100px;
     margin-left: 1%;
     overflow: visible;
+}
+
+.rules {
+    position: absolute;
+    top: 170px;
+    font-size: 30px;
+    color: #ffffff;
+    letter-spacing: 3px;
+    width: 99%;
+    text-align: center;
+    animation-name: afterintro;
+    animation-duration: 5.5s;
+}
+
+@keyframes imgfade {
+    0% {
+        filter: grayscale(0%);
+    }
+    100% {
+        filter: grayscale(100%);
+    }
 }
