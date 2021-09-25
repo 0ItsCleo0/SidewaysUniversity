@@ -66,6 +66,7 @@
     height: 300px;
     border-right: 15px solid rgba(0, 0, 0, 0);
     border-radius: 50px;
+    margin-right: 15px;
     overflow: hidden;
 }
 
@@ -106,6 +107,7 @@
     height: 300px;
     border-right: 15px solid rgba(0, 0, 0, 0);
     border-radius: 50px;
+    margin-right: 15px;
 }
 
 .sentinelsg4 h1 {
@@ -140,6 +142,7 @@
     height: 300px;
     border-right: 15px solid rgba(0, 0, 0, 0);
     border-radius: 50px;
+    margin-right: 15px;
 }
 
 .s230 h1 {
@@ -167,9 +170,6 @@
     display: block;
     text-decoration: none;
     text-align: center;
-    background-color: rgba(51, 51, 51, 0.61);
-    border: 1px solid white;
-    border-radius: 10px;
     margin-top: 100px;
     max-width: fit-content;
     max-height: fit-content;
@@ -179,7 +179,7 @@
 
 .events_content p {
     font-size: 80px;
-    color: white;
+    color: rgb(0, 0, 0);
     letter-spacing: 5px;
     padding: 10px;
     margin-block: auto;
@@ -426,8 +426,11 @@ input[type=password] {
     margin-top: 200px;
     margin-left: 30%;
     margin-right: 30%;
-    font-size: 50px;
+    font-size: 20px;
+    color: #af0707;
     background-color: #343434;
+    border: 1px solid #af0707;
+    box-shadow: inset 0px 0px 22px 9px rgba(0, 0, 0, 0.25);
     padding-bottom: 10px;
     padding-left: 20px;
     padding-right: 20px;
@@ -436,8 +439,9 @@ input[type=password] {
 
 input[type=text] {
     width: 100%;
-    padding: 12px 20px;
+    padding: 15px 20px;
     margin: 8px 0;
+    font-size: 20px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
@@ -461,7 +465,6 @@ iframe {
     position: absolute;
     top: 100px;
     margin-left: 1%;
-    overflow: visible;
 }
 
 .rules {
