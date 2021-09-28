@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sideways University</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="This is a basic website for Sideways University.">
+        <meta name="author" content="Headless">
+        <link type="text/css" rel="stylesheet" href="styles.css">
+    </head>
+    <body class="underground">
+        <div class="underground_topnav2">
+            <div class="rectangle"></div>
+            <a href="index.html"><img class="imgfade" src="resources/back.png" alt="back"></a> 
+            <a href="underevents.html"><img class="imgfade" src="resources/car.png" alt="events" style="left: 100px;"></a> 
+            <h2>The Underground</h2> 
+
+            <script type="text/javascript">var submitted=false;</script>
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted)  {window.location='underevents.html';}"></iframe>
+
+            <form class="event_submit" action="https://docs.google.com/forms/u/2/d/e/1FAIpQLSf87GhKltYQrj6z05hM-tUjgK3ET3pedV28Bt7C--ceOmvWSA/formResponse"method="post" target="hidden_iframe"
+            onsubmit="submitted=true;">
+                <h1>Underground Events</h1>
+                <input type="text" name="entry.1800718015" id="Name" placeholder="What type of event is it? Drift? Race?" required>
+                <input type="text" name="entry.1911475276" id="Name" placeholder="Where is everyone meeting?" required>
+                <input type="text" name="entry.527631585" id="Name" placeholder="How much is entry?" required>
+                <input type="text" name="entry.285801806" id="Name" placeholder="What class are the vehicles?" required>
+                <input type="text" name="entry.1495826787" id="Name" placeholder="What do we call you?" required>
+                <input type="text" name="entry.482226653" id="Name" placeholder="Codeword Required To Send Ping" required>
+                <input type="submit" value="Ping The Underground" />
+            </form>
+        </div>
+    </body>
+</html>
+
+
+
