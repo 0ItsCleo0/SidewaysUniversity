@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sideways University</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="This is a basic website for Sideways University.">
+        <meta name="author" content="Headless">
+        <link type="text/css" rel="stylesheet" href="/styles.8986bff4.css">
+    </head>
+    <body class="undergroundpass">
+        <div class="topnav">
+            <div class="homepass">
+            <a href="/index.html">Home</a>
+        </div>
+        </div>
+        <div class="password">
+        <form>
+            <label for="pswd"></label>
+            <input type="password" maxlength="4" id="pswd" onkeyup="checkPswd()">
+        </form>
+        <!--Function to check password the already set password is admin-->
+        <script>function checkPswd() {
+  var confirmPassword = "5861";
+  var password = document.getElementById("pswd").value;
+
+  if (password == confirmPassword) {
+    window.location = "underground.html";
+  }
+}</script>
+        </div>
+    </body>
+</html>
