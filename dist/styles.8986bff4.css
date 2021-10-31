@@ -13,7 +13,6 @@
 .topnav {
     overflow: hidden;
     background-color: rgba(51, 51, 51, 0.644);
-    border-radius: 5px;
     text-align: center;
     max-width: fit-content;
     margin-left: auto;
@@ -508,7 +507,7 @@ iframe {
 
 .contactinfo {
     text-align: center;
-    font-size: 30px;
+    font-size: 15px;
     margin-top: 15px;
     background-color: rgba(51, 51, 51, 0.644);
     border: 1px solid white;
