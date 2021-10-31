@@ -163,7 +163,7 @@
     margin-right: auto;
     margin-top: 15px;
     width: 700px;
-    height: 835px;
+    height: fit-content;
     border: 1px solid white;
 }
 
@@ -180,7 +180,7 @@
 
 .events_content p {
     font-size: 80px;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     letter-spacing: 5px;
     padding: 10px;
     margin-block: auto;
