@@ -522,4 +522,9 @@ iframe {
     font-family: 'Montserrat';
 }
 
+a {
+    text-decoration: none;
+    color: white;
+}
+
 /*# sourceMappingURL=/styles.8986bff4.css.map */

@@ -521,3 +521,8 @@ iframe {
     padding-top: 0;
     font-family: 'Montserrat';
 }
+
+a {
+    text-decoration: none;
+    color: white;
+}
