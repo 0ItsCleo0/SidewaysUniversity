@@ -27,7 +27,7 @@
 .topnav a {
     display: inline-block;
     color: white;
-    padding: 14px 16px;
+    padding: 10px;
     text-decoration: none;
     letter-spacing: 10px;
 }
@@ -209,15 +209,14 @@
     overflow: auto;
 }
 
-.homepass {
-    background-color: rgb(0, 0, 0);
+.homepass a{
     font-family: 'Montserrat';
+    font-size: 30px;
+    margin-inline: 1%;
 }
 
 .homepass a:hover {
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    border-radius: 18px;
+    color: rgb(153, 153, 153);
 }
 
 .undergroundpass form {
@@ -233,14 +232,14 @@
 
 input[type=password] {
     overflow: hidden;
-    background-color: rgb(0, 0, 0);
-    height: 100px;
+    background-color: rgb(12, 12, 12);
+    height: 75px;
     width: 300px;
     border:3px solid rgb(255, 255, 255);
     border-radius: 10px;
     color: rgb(255, 255, 255);
     text-decoration: none;
-    font-size: 100px;
+    font-size: 75px;
     text-align: center;
     letter-spacing: 40px;
     padding-left: 35px;
@@ -254,8 +253,13 @@ input[type=password] {
     overflow: auto;
     zoom: 80%;
 }
-.undergroundevents {
-    background-image: url(resources/car.gif);
+#background {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
 }
 
 @keyframes undergroundfade {
