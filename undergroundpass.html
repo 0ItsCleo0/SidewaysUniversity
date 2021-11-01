@@ -21,10 +21,14 @@
         <!--Function to check password the already set password is admin-->
         <script type="text/javascript">
             function checkPswd() {
-                var confirmPassword = "5861";
+                var market = "7153";
+                var racing = "9267";
                 var password = document.getElementById("pswd").value;
-                if (password == confirmPassword) {
+                if (password == market) {
                      window.location="underground.html";
+                }
+                else if (password == racing) {
+                     window.location="undergroundevents.html";
                 }
             }
         </script>
