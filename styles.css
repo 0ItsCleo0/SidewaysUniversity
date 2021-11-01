@@ -254,6 +254,9 @@ input[type=password] {
     overflow: auto;
     zoom: 80%;
 }
+.undergroundevents {
+    background-image: url(resources/car.gif);
+}
 
 @keyframes undergroundfade {
     from {background-color: rgb(0, 0, 0);}
@@ -415,45 +418,51 @@ input[type=password] {
 .underground form {   
     position: absolute;
     text-align: center;
-    margin-top: 200px;
-    margin-left: 30%;
-    margin-right: 30%;
+    margin-block: 10%;
+    margin-left: 20%;
+    margin-right: 20%;
     font-size: 20px;
     color: #ffffff;
-    background-color: #343434;
+    background-color: #0000008a;
     border: 1px solid #ffffff;
     padding-bottom: 10px;
     padding-left: 20px;
     padding-right: 20px;
     border-radius: 10px;
     font-family: 'Montserrat';
+    letter-spacing: 3px;
 }
 
-input[type=text] {
+input[type=text], select {
     width: 100%;
     padding: 15px 20px;
     margin: 8px 0;
-    font-size: 20px;
-    border: 1px solid #ccc;
+    font-size: 100%;
+    border: 1px solid rgb(110, 110, 110);
     border-radius: 4px;
     box-sizing: border-box;
-    background-color: #343434;
+    background-color: #181818;
     color: white;
     text-align: center;
     font-family: 'Montserrat';
+    letter-spacing: 3px;
 }
 
 input[type=submit] {
     width: 100%;
-    background-color: #000000;
-    color: white;
+    background-color: #ffffff1a;
+    color: rgb(255, 255, 255);
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-family: 'Montserrat';
-  }
+    font-size: 115%;
+}
+input[type=submit]:hover {
+    background-color: #ffffff27;
+}
 
 .market-links {
     position: absolute;
