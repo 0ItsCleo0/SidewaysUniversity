@@ -585,7 +585,14 @@ a {
 }
 #applicationForm p {
     font-size: 25px;
+    padding-inline: 10px;
 }
-#applicationForm input {
-    padding-inline: 5px;
+#applicationForm input, select {
+    padding-inline: 10px;
+    border: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+}
+#applicationForm option {
+    background: rgba(51, 51, 51, 1);
 }
