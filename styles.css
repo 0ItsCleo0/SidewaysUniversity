@@ -503,13 +503,12 @@ input[type=submit]:hover {
     margin-left: auto;
     margin-right: auto;
     padding: 30px;
-    padding-top: 0;
     font-family: 'Montserrat';
 }
 
 .contactinfo {
     text-align: center;
-    font-size: 15px;
+    font-size: 20px;
     margin-top: 15px;
     background-color: rgba(51, 51, 51, 0.644);
     border: 1px solid white;
@@ -521,6 +520,9 @@ input[type=submit]:hover {
     padding: 30px;
     padding-top: 0;
     font-family: 'Montserrat';
+}
+.contactinfo .title {
+    padding: 10px;
 }
 
 a {
