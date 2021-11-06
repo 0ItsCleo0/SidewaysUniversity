@@ -168,18 +168,15 @@
 }
 
 .events_content {
-    display: block;
     text-decoration: none;
     text-align: center;
     margin-top: 100px;
-    max-width: fit-content;
+    max-width: 50%;
     max-height: fit-content;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .events_content p {
-    font-size: 80px;
+    font-size: 40px;
     color: rgb(255, 255, 255);
     letter-spacing: 5px;
     padding: 10px;
@@ -599,4 +596,39 @@ a {
 #applicationForm input[type=submit]:hover {
     background: rgba(51, 51, 51, 0.5);
     box-shadow: 0px 0px 20px 20px rgba(51, 51, 51, 0.5);
+}
+
+.event-signup {
+    color: white;
+    font-family: 'Montserrat';
+}
+.event-signup h1 {
+    text-align: center;
+    font-size: 40px;
+    padding: 10px;
+}
+.event-signup h2 {
+    font-size: 30px;
+}
+.event-signup input[type=text] {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+}
+.events-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.events-container img {
+    width: 50%;
+}
+.event-details {
+    color: white;
+    font-family: 'Montserrat';
+    font-size: 20px;
+}
+.event-details ul {
+    list-style: none;
+    font-size: 30px;
 }

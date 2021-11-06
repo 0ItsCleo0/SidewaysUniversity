@@ -15,38 +15,59 @@
             <a href="events.html">Events</a>
             <a href="contact.html">Contact</a>
         </div>
-        <div class="events_content">
-            <p id="time"></p>
-        </div>
-        <script>
-            // Set the date we're counting down to
-            var countDownDate = new Date("Nov 6, 2021 19:00:00").getTime();
-            
-            // Update the count down every 1 second
-            var x = setInterval(function() {
-            
-              // Get today's date and time
-              var now = new Date().getTime();
-            
-              // Find the distance between now and the count down date
-              var distance = countDownDate - now;
-            
-              // Time calculations for days, hours, minutes and seconds
-              var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-              var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-              var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-              var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            
-              // Display the result in the element with id="time"
-              document.getElementById("time").innerHTML = days + "d " + hours + "h "
-              + minutes + "m " + seconds + "s ";
-            
-              // If the count down is finished, write some text
-              if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("time").innerHTML = "GO DRIFT!";
-              }
-            }, 1000);
+        <div class="events-container">
+                <img src="resources/DelPerroPierDriftEvent.png">
+            <script>
+                // Set the date we're counting down to
+                var countDownDate = new Date("Nov 6, 2021 19:00:00").getTime();
+                
+                // Update the count down every 1 second
+                var x = setInterval(function() {
+                
+                // Get today's date and time
+                var now = new Date().getTime();
+                
+                // Find the distance between now and the count down date
+                var distance = countDownDate - now;
+                
+                // Time calculations for days, hours, minutes and seconds
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+                // Display the result in the element with id="time"
+                document.getElementById("time").innerHTML = days + "d " + hours + "h "
+                + minutes + "m " + seconds + "s ";
+                
+                // If the count down is finished, write some text
+                    if (distance < 0) {
+                        clearInterval(x);
+                        document.getElementById("time").innerHTML = "GO DRIFT!";
+                    }
+                }, 1000);
             </script>
+            <div class="form">
+                <script type="text/javascript">var submitted=false;</script>
+                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted)  {window.location='events.html';}"></iframe>
+
+                <form class="event-signup" action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSfIoPYrE9Oaq6j2A5gwG7lvtIqT2YpbgnLhAlOXsCY6XbF3Xw/formResponse"method="post" target="hidden_iframe"
+                onsubmit="submitted=true;">
+                    <h1>Event Signup</h1>
+                    <h2>Name</h2>
+                    <input type="text" name="entry.1082949861" id="Name" placeholder="" required>
+                    <h2>Phone Number</h2>
+                    <input type="text" name="entry.517176826" id="Name" placeholder="" required>
+                    <input type="submit" value="Submit" />
+                </form>
+                <div class="event-details">
+                    <h1>Required To Participate:</h1>
+                    <ul>
+                        <li>- Rented Drift Car</li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
