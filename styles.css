@@ -619,6 +619,8 @@ a {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    border-bottom: 1px solid white;
+    height: 120vh;
 }
 .events-container img {
     width: 50%;
@@ -631,4 +633,21 @@ a {
 .event-details ul {
     list-style: none;
     font-size: 30px;
+}
+.raffle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.raffle h1 {
+    color: white;
+    text-align: center;
+    padding: 20px;
+    padding-bottom: 0;
+    font-size: 50px;
+    font-family: 'Montserrat';
+    letter-spacing: 3px;
+}
+.raffle img {
+    padding: 20px;
 }
