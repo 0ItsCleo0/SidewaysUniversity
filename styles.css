@@ -157,24 +157,6 @@
     height: fit-content;
     border: 1px solid white;
 }
-
-.events_content {
-    text-decoration: none;
-    text-align: center;
-    margin-top: 100px;
-    max-width: 50%;
-    max-height: fit-content;
-}
-
-.events_content p {
-    font-size: 40px;
-    color: rgb(255, 255, 255);
-    letter-spacing: 5px;
-    padding: 10px;
-    margin-block: auto;
-    font-family: 'Montserrat';
-}
-
 .password form {
     display: block;
     text-align: center;
@@ -600,20 +582,18 @@ a {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    border-bottom: 1px solid white;
     height: 120vh;
 }
 .events-container img {
     width: 50%;
 }
 .event-details {
-    color: white;
+    color: rgb(253, 95, 95);
     font-family: 'Montserrat';
-    font-size: 20px;
-}
-.event-details ul {
-    list-style: none;
-    font-size: 30px;
+    letter-spacing: 3px;
+    font-size: 10px;
+    padding-inline: 35px;
+    border-bottom: 1px solid white;
 }
 .raffle {
     display: flex;
@@ -633,4 +613,25 @@ a {
 .raffle img, .track img {
     width: 100%;
     padding: 20px;
+}
+.detail-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+}
+.detail-wrapper ul, .car-raffle ul {
+    list-style: none;
+}
+.drift-comp, .car-show, .car-raffle {
+    color: white;
+    font-size: 20px;
+    padding-block: 20px;
+}
+.drift-comp p, .car-show p, .car-raffle p {
+    font-size: 30px;
+    text-align: center;
+}
+.car-raffle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
