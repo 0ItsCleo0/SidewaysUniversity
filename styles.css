@@ -638,8 +638,9 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    border-bottom: 1px solid white;
 }
-.raffle h1 {
+.raffle h1, .track h1 {
     color: white;
     text-align: center;
     padding: 20px;
@@ -648,6 +649,7 @@ a {
     font-family: 'Montserrat';
     letter-spacing: 3px;
 }
-.raffle img {
+.raffle img, .track img {
+    width: 100%;
     padding: 20px;
 }
