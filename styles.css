@@ -628,10 +628,12 @@ a {
 }
 .drift-comp p, .car-show p, .car-raffle p {
     font-size: 30px;
-    text-align: center;
 }
 .car-raffle {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.car-show {
+    text-align: right;
 }
