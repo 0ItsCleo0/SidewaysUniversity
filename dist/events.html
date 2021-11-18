@@ -8,9 +8,6 @@
         <link type="text/css" rel="stylesheet" href="/styles.8986bff4.css">
     <script src="/contact.js"></script></head>
     <body class="base">
-        <div class="sidewaysuniversity">
-            <img src="/SidewaysUniversity.ff679150.png" alt="SidewaysUniversity">
-        </div>
         <div class="topnav">
             <a href="/index.html">Home</a>
             <a href="/prices.html">Pricing</a>
@@ -18,29 +15,15 @@
             <a href="/events.html">Events</a>
             <a href="/contact.html">Contact</a>
         </div>
-        <div class="events_content">
-            <p id="time"></p>
+        <div class="events-container">
+            <h1>No Upcoming Events</h1>
+            <hr>
+            <div class="event-archive">
+                <h1>Event Archive</h1>
+                <div class="past-events">
+                    <img src="/DelPerroPierDriftEvent.1494bb7b.png">  
+                </div>
+            </div>
         </div>
-        <script>// Set the date we're counting down to
-var countDownDate = new Date("Nov 6, 2021 19:00:00").getTime(); // Update the count down every 1 second
-
-var x = setInterval(function () {
-  // Get today's date and time
-  var now = new Date().getTime(); // Find the distance between now and the count down date
-
-  var distance = countDownDate - now; // Time calculations for days, hours, minutes and seconds
-
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor(distance % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
-  var minutes = Math.floor(distance % (1000 * 60 * 60) / (1000 * 60));
-  var seconds = Math.floor(distance % (1000 * 60) / 1000); // Display the result in the element with id="time"
-
-  document.getElementById("time").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s "; // If the count down is finished, write some text
-
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("time").innerHTML = "GO DRIFT!";
-  }
-}, 1000);</script>
     </body>
 </html>

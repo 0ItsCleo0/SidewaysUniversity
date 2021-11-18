@@ -8,11 +8,9 @@
         <link type="text/css" rel="stylesheet" href="/styles.8986bff4.css">
     </head>
     <body class="undergroundpass">
-        <div class="topnav">
             <div class="homepass">
-            <a href="/index.html">Home</a>
-        </div>
-        </div>
+                <a href="/index.html"> &#8810;</a>
+            </div>
         <div class="password">
         <form>
             <label for="pswd"></label>
@@ -20,11 +18,14 @@
         </form>
         <!--Function to check password the already set password is admin-->
         <script>function checkPswd() {
-  var confirmPassword = "5861";
+  var market = "7153";
+  var racing = "9267";
   var password = document.getElementById("pswd").value;
 
-  if (password == confirmPassword) {
+  if (password == market) {
     window.location = "underground.html";
+  } else if (password == racing) {
+    window.location = "undergroundevents.html";
   }
 }</script>
         </div>
