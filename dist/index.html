@@ -1,51 +1,117 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Sideways University</title>
-        <meta charset="UTF-8">
-        <meta name="description" content="This is a basic website for Sideways University.">
-        <meta name="author" content="Headless">
-        <link type="text/css" rel="stylesheet" href="/styles.8986bff4.css">
-    <script src="/styles.8986bff4.js"></script><script src="/prices.js"></script></head>
-    <body class="base">
-        
-        <div class="topnav">
-            <a href="/index.html">Home</a>
-            <a href="/prices.html">Pricing</a>
-            <a href="/leaderboard.html">Leaderboard</a>
-            <a href="/events.html">Events</a>
-            <a href="/contact.html">Contact</a>
-        </div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sideways University</title>
+    <link type="text/css" rel="stylesheet" href="/style.493e6e98.css">
+<script src="/style.493e6e98.js"></script></head>
+<body>
+    <nav>
+        <img src="/SidewaysUniversityLogo.67ef4034.png">
+        <ul>
+            <li class="page-open-btn" data-active="#home">Home</li>
+            <li class="page-open-btn" data-active="#pricing">Pricing</li>
+            <li class="page-open-btn" data-active="">Host An Event</li>
+            <li class="page-open-btn" data-active="">Gallery</li>
+        </ul>
+    </nav>
 
-        <div class="hero">
-            <img src="/car.50183c13.gif" alt="">
-            <div class="text">
-                <h1>Do you want to be apart of<br>Sideways University?</h1>
-                <button><a href="/hiring.html">Apply Here</a></button>
-            </div>
+    <section id="home" class="open">
+        <div id="hero">
+            <h1>Want to host a drift event?</h1>
+            <button>Host An Event</button>
         </div>
+        <ul id="quick-info-cards">
+            <li>
+                <img src="/Sass.16d8ad92.png">
+                <h1>Drift School</h1>
+                <p>Go from no to pro with our comprehensive drift shool.
+                    Our instructors will make changes to occomidate your needs to ensure you leave your session knowing practical skills you can apply right away.</p>
+            </li>
+            <li>
+                <img src="/Sass.16d8ad92.png">
+                <h1>Drift Events</h1>
+                <p>Sideways University is known for the high end drift events that we host. We give everyone the opertunity to prove themselves on our custom built, competition tracks. We also offer the ability for you to host an event using our resources.</p>
+            </li>
+            <li>
+                <img src="/Sass.16d8ad92.png">
+                <h1>Drift Cars</h1>
+                <p>We offer a small selection of highly tuned drift cars. While the selection isn’t massive, we are sure you will enjoy the cars we have to offer. Each car is unique in how it handles and will give you another reason to keep practicing your desired choice.</p>
+            </li>
+        </ul>
+        <div id="contact-info">
+            <h1 id="contact-us-title">Contact Us</h1>
+            <ul>
+                <li>
+                    <img src="">
+                    <h1>Xzavier Quest</h1>
+                    <h1>Number: 4876231339</h1>
+                </li>
+                <li>
+                    <img src="">
+                    <h1>Ricky Beans</h1>
+                    <h1>Number: 4552792058</h1>
+                </li>
+            </ul>
+        </div>
+        <div id="location">
+            <h1>Location</h1>
+            <img src="/20210925211129_1.ba0b3745.jpg" alt="">
+        </div>
+    </section>
 
-        <div class="rx7">
-            <img src="/ZR350.85ebd79f.jpg" alt="1st_Car" width="500" height="260" style="border-right: 1px solid white;">
-            <h1>Annis ZR-350</h1>
-            <p>Much like in the narco-business, on the car market one must keep up with demand not to lose the clientele.
-                This car is a well known and beloved among anyone into the JDM scene. All we did was make it better.
-                The ZR-350 will leave you asking for a fix and lead you to a discovery - your inner self revealed or your guts splattered all over some mountain pass.
-                If that's not a win-win scenario, we don't know what is.</p>
+    <section id="pricing">
+        <div id="car-pricing">
+            <h1>Car Pricing</h1>
+            <ul>
+                <li>
+                    <div>
+                        <img src="/S230.cd2dbd1e.jpg">
+                        <div>
+                            <h2>Car: Annis S-230</h2>
+                            <hr>
+                            <h2>Price: $1,500</h2> 
+                        </div>
+                    </div>
+                    <p>The underdog stories are not exclusive to sports, mythology and adult video industry. 
+                            The S230 is the proof of that - always in the shadows of its famous compatriots, it didn't get to enjoy countless sponsorships and movie cameos under its belt. 
+                            But behind the smell of takeout food and sewage, there is untapped potential to kick ass while staying under the radar. 
+                            So if you've got nothing to lose, and excessive tail-happiness is but a quirk, it's yours for the taking. Don't pull any punches with it.</p>
+                </li>
+                <li>
+                    <div>
+                        <img src="/SENTINELSG4.9e5bb08a.png">
+                        <div>
+                            <h2>Car: Sentinel SG4</h2>
+                            <hr>
+                            <h2>Price: $1,750</h2>
+                        </div>
+                    </div>
+                    <p>A gentleman of the recent past, the Sentinel SG4 was a sight to behold at a mafia meeting or a cross-city race. 
+                        It might have lost some of its charm in the past years, but there's still some blood left in its veins. And with a bold bastard behind the wheel it's ready to spill more than a pint.</p>
+                </li>
+                <li>
+                    <div>
+                        <img src="/ZR350.85ebd79f.jpg">
+                        <div>
+                            <h2>Car: Annis ZR-350</h2>
+                            <hr>
+                            <h2>Price: $2,000</h2>
+                        </div>
+                    </div>
+                    <p>Much like in the narco-business, on the car market one must keep up with demand not to lose the clientele.
+                        This car is a well known and beloved among anyone into the JDM scene. All we did was make it better.
+                        The ZR-350 will leave you asking for a fix and lead you to a discovery - your inner self revealed or your guts splattered all over some mountain pass.
+                        If that's not a win-win scenario, we don't know what is.</p>
+                </li>
+            </ul>
         </div>
-        <div class="sentinelsg4">
-            <img src="/SENTINELSG4.9e5bb08a.png" alt="2nd_Car" width="500" height="260" style="border-right: 1px solid white;">
-            <h1>Ubermacht Sentinel SG4</h1>
-            <p>A gentleman of the recent past, the Sentinel SG4 was a sight to behold at a mafia meeting or a cross-city race. 
-                It might have lost some of its charm in the past years, but there's still some blood left in its veins. And with a bold bastard behind the wheel it's ready to spill more than a pint.</p>
-        </div>
-        <div class="s230">
-            <img src="/S230.cd2dbd1e.jpg" alt="3rd_Car" width="500" height="260" style="border-right: 1px solid white;">
-            <h1>Annis S-230</h1>
-            <p>The underdog stories are not exclusive to sports, mythology and adult video industry. 
-                The S230 is the proof of that - always in the shadows of its famous compatriots, it didn't get to enjoy countless sponsorships and movie cameos under its belt. 
-                But behind the smell of takeout food and sewage, there is untapped potential to kick ass while staying under the radar. 
-                So if you've got nothing to lose, and excessive tail-happiness is but a quirk, it's yours for the taking. Don't pull any punches with it.</p>
-        </div>
-    </body>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="/animations.9060938b.js"></script>
+</body>
 </html>
