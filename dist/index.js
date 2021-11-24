@@ -117,183 +117,74 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/animations.js":[function(require,module,exports) {
-//Page Transitions
-var pageList = {
-  home: "#home",
-  pricing: "#pricing",
-  host_an_event: "#hosting",
-  gallery: "#gallery"
-};
-var pages = Object.values(pageList);
+})({"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+var bundleURL = null;
 
-function closePages() {
-  for (var num = 0; num <= 5; num++) {
-    if ($(pages[num]).hasClass("open")) {
-      var pageClose = gsap.timeline({
-        defaults: {
-          ease: "power1.out"
-        }
-      });
-      pageClose.to(".open", {
-        opacity: "0",
-        duration: 0.5
-      });
-      pageClose.to(".open", {
-        overflow: "hidden",
-        duration: 0.1
-      });
-      pageClose.to(".open", {
-        zIndex: "-1",
-        duration: 0.1
-      });
-      $(".open").removeClass("open");
-    }
+function getBundleURLCached() {
+  if (!bundleURL) {
+    bundleURL = getBundleURL();
   }
+
+  return bundleURL;
 }
 
-$(".page-open-btn").on("click", function () {
-  var toActive = $(this).attr("data-active");
+function getBundleURL() {
+  // Attempt to find the URL of the current script and use that as the base URL
+  try {
+    throw new Error();
+  } catch (err) {
+    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
 
-  if ($(toActive).attr("class") != "open") {
-    closePages();
-    $(toActive).addClass("open");
-    var pageOpen = gsap.timeline({
-      defaults: {
-        ease: "expo.inOut"
-      }
-    });
-    pageOpen.to(".open", {
-      zIndex: "2",
-      duration: 0.1
-    });
-    pageOpen.to(".open", {
-      overflow: "visible",
-      duration: 0.1
-    });
-    pageOpen.to(".open", {
-      opacity: "1",
-      duration: 0.5
-    });
-  }
-}); // Handles Host An Event Form
-
-$("#host-an-event-btn").on("click", function () {
-  var toActive = $(this).attr("data-active");
-
-  if ($(toActive).attr("class") != "form-open") {
-    $(toActive).addClass("form-open");
-    var formOpen = gsap.timeline({
-      defaults: {
-        ease: "expo.inOut"
-      }
-    });
-    formOpen.to(".form-open", {
-      height: "60%",
-      opacity: "1",
-      duration: 1
-    });
-    formOpen.fromTo(".host-an-event-form h1", {
-      opacity: "0"
-    }, {
-      opacity: "1",
-      duration: 1
-    }, "-=1");
-    formOpen.fromTo(".host-an-event-form input", {
-      opacity: "0"
-    }, {
-      opacity: "1",
-      duration: 1
-    }, "-=1");
-    formOpen.fromTo(".host-an-event-form select", {
-      opacity: "0"
-    }, {
-      opacity: "1",
-      duration: 1
-    }, "-=1");
-  }
-});
-$(".close-btn").on("click", function () {
-  var form = $(this).attr("data-active");
-
-  if ($(form).attr("class") == "form-open") {
-    var formClose = gsap.timeline({
-      defaults: {
-        ease: "expo.inOut"
-      }
-    });
-    formClose.to(".form-open", {
-      height: "0",
-      opacity: "0",
-      duration: 1
-    });
-    $(form).removeClass("form-open");
-  }
-});
-$('#host-an-event-form').submit(function (e) {
-  e.preventDefault(); // do ajax now
-
-  var formSubmitted = gsap.timeline({
-    defaults: {
-      ease: "expo.inOut"
+    if (matches) {
+      return getBaseURL(matches[0]);
     }
-  });
-  formSubmitted.fromTo("#form h1", {
-    opacity: "1"
-  }, {
-    opacity: "0",
-    duration: 1
-  });
-  formSubmitted.fromTo("#form input", {
-    opacity: "1"
-  }, {
-    opacity: "0",
-    duration: 1
-  }, "-=1");
-  formSubmitted.fromTo("#form select", {
-    opacity: "1"
-  }, {
-    opacity: "0",
-    duration: 1
-  }, "-=1");
-  formSubmitted.to(".checkmark", {
-    width: "80%",
-    duration: 1
-  }, "-=1");
-  formSubmitted.to(".checkmark__circle", {
-    strokeDashoffset: "0",
-    duration: 2
-  }, "-=1");
-  formSubmitted.to(".checkmark__check", {
-    strokeDashoffset: "0",
-    duration: 1
-  }, "-=1");
-  formSubmitted.to(".checkmark__check", {
-    strokeDashoffset: "48",
-    duration: 1
-  });
-  formSubmitted.to(".checkmark__circle", {
-    strokeDashoffset: "166",
-    duration: 2
-  }, "-=1");
-  formSubmitted.to(".checkmark", {
-    width: "0",
-    duration: 1
-  }, "-=1");
-  formSubmitted.to("#form", {
-    height: "0",
-    opacity: "0",
-    duration: 1
-  }, "-=1");
-  $("#form").removeClass("form-open");
-  console.log("submitted");
-  document.getElementById("host-an-event-form").submit();
-  document.getElementById("name").value = "";
-  document.getElementById("number").value = "";
-  document.getElementById("date").value = "";
-  document.getElementById("package-select").value = "";
-});
-},{}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+  }
+
+  return '/';
+}
+
+function getBaseURL(url) {
+  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)?\/[^/]+(?:\?.*)?$/, '$1') + '/';
+}
+
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+},{}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+var bundle = require('./bundle-url');
+
+function updateLink(link) {
+  var newLink = link.cloneNode();
+
+  newLink.onload = function () {
+    link.remove();
+  };
+
+  newLink.href = link.href.split('?')[0] + '?' + Date.now();
+  link.parentNode.insertBefore(newLink, link.nextSibling);
+}
+
+var cssTimeout = null;
+
+function reloadCSS() {
+  if (cssTimeout) {
+    return;
+  }
+
+  cssTimeout = setTimeout(function () {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+
+    for (var i = 0; i < links.length; i++) {
+      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
+        updateLink(links[i]);
+      }
+    }
+
+    cssTimeout = null;
+  }, 50);
+}
+
+module.exports = reloadCSS;
+},{"./bundle-url":"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -497,5 +388,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/animations.js"], null)
-//# sourceMappingURL=/animations.9060938b.js.map
+},{}]},{},["../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
+//# sourceMappingURL=/index.js.map

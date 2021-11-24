@@ -12,7 +12,7 @@ for (var num = 0; num <= 5; num++){
         });
         pageClose.to(
             ".open", { 
-            height: "0", 
+            overflow: "hidden", 
             duration: 0.1
         });
         pageClose.to(
@@ -37,7 +37,7 @@ $(".page-open-btn").on("click",function(){
         });
         pageOpen.to(
             ".open", { 
-            height: "100vh", 
+            overflow: "visible", 
             duration: 0.1
         });
         pageOpen.to(
@@ -46,4 +46,63 @@ $(".page-open-btn").on("click",function(){
             duration: 0.5
         });
     }
+});
+
+// Handles Host An Event Form
+$("#host-an-event-btn").on("click",function(){
+    const toActive = $(this).attr("data-active"); 
+    if ($(toActive).attr("class") != "form-open") {
+        $(toActive).addClass("form-open");
+        const formOpen = gsap.timeline({ defaults: {ease: "expo.inOut"} });
+        formOpen.to(
+            ".form-open", { 
+            height: "60%",
+            opacity: "1",
+            duration: 1
+        });
+        formOpen.fromTo(".host-an-event-form h1", {opacity: "0"}, {opacity: "1", duration: 1}, "-=1");
+        formOpen.fromTo(".host-an-event-form input", {opacity: "0"}, {opacity: "1", duration: 1}, "-=1");
+        formOpen.fromTo(".host-an-event-form select", {opacity: "0"}, {opacity: "1", duration: 1}, "-=1");
+    }
+});
+$(".close-btn").on("click",function(){
+    const form = $(this).attr("data-active"); 
+    if ($(form).attr("class") == "form-open") {
+        const formClose = gsap.timeline({ defaults: {ease: "expo.inOut"} });
+        formClose.to(
+            ".form-open", { 
+            height: "0", 
+            opacity: "0",
+            duration: 1
+        });
+        $(form).removeClass("form-open");
+    }
+});
+
+$('#host-an-event-form').submit(function(e){
+    e.preventDefault();
+
+    // do ajax now
+    const formSubmitted = gsap.timeline({ defaults: {ease: "expo.inOut"} });
+
+    formSubmitted.fromTo("#form h1", {opacity: "1"}, {opacity: "0", duration: 1});
+    formSubmitted.fromTo("#form input", {opacity: "1"}, {opacity: "0", duration: 1}, "-=1");
+    formSubmitted.fromTo("#form select", {opacity: "1"}, {opacity: "0", duration: 1}, "-=1");
+    formSubmitted.to(".checkmark", {width: "80%", duration: 1}, "-=1");
+    formSubmitted.to(".checkmark__circle", {strokeDashoffset: "0", duration: 2}, "-=1");
+    formSubmitted.to(".checkmark__check", {strokeDashoffset: "0", duration: 1}, "-=1");
+    
+    formSubmitted.to(".checkmark__check", {strokeDashoffset: "48", duration: 1});
+    formSubmitted.to(".checkmark__circle", {strokeDashoffset: "166", duration: 2}, "-=1");
+    formSubmitted.to(".checkmark", {width: "0", duration: 1}, "-=1");
+
+    formSubmitted.to("#form", {height: "0",opacity: "0", duration: 1}, "-=1");
+    $("#form").removeClass("form-open");
+
+    console.log("submitted"); 
+    document.getElementById("host-an-event-form").submit();
+    document.getElementById("name").value = "";
+    document.getElementById("number").value = "";
+    document.getElementById("date").value = "";
+    document.getElementById("package-select").value = "";
 });

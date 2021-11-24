@@ -41,6 +41,7 @@ nav {
     height: 100vh;
     background: white;
     position: absolute;
+    overflow: visible;
     #hero {
         width: 100%;
         height: 100%;
@@ -91,6 +92,9 @@ nav {
             background: #ECECEC;
             color: #636363;
             img {
+                background-color: black;
+                padding: 2%;
+                border-radius: 50%;
                 width: 250px;
             }
             h1 {
@@ -149,7 +153,6 @@ nav {
         }
         img {
             width: 80%;
-            height: 130vh;
             margin: 5% 0;
             border: 1px solid black;
             border-radius: 30px;
@@ -158,6 +161,8 @@ nav {
 }
 #pricing {
     width: 90%;
+    height: 100vh;
+    overflow: hidden;
     background: white;
     position: absolute;
     z-index: -1;
@@ -238,6 +243,8 @@ nav {
 }
 #hosting {
     width: 90%;
+    height: 100vh;
+    overflow: hidden;
     background: white;
     position: absolute;
     z-index: -1;
@@ -316,13 +323,13 @@ nav {
                 flex-direction: column;
                 justify-content: space-evenly;
                 h2 {
-                    font-size: 400px;
-                    font-weight: 200;
+                    font-size: 300px;
+                    font-weight: 400;
                 }
                 h3 {
-                    font-size: 150px;
+                    font-size: 120px;
                     font-weight: 200;
-                    letter-spacing: 10px;
+                    letter-spacing: 5px;
                 }
             }
             .package-details {
@@ -353,6 +360,7 @@ nav {
             li {
                 border: 1px solid #636363;
                 border-radius: 20px;
+                margin-bottom: 4%;
                 img {
                     width: 4000px;
                     border-bottom: 1px solid #636363;
@@ -368,6 +376,143 @@ nav {
                     }
                 }
             }
+        }
+    }
+}
+#form {
+    width: 60%;
+    height: 0%;
+    display: flex;
+    justify-content: center;
+    margin: 5% 45%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    background: white;
+    position: absolute;
+    z-index: 10;
+    opacity: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid black;
+    h1 {
+        font-size: 120px;
+        border-bottom: 1px solid black;
+        margin: 4% 0; 
+    }
+    form {
+        height: 86%;
+        width: 130%;
+        transform: translateX(-12.5%);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        input, select, option {
+            border: 0;
+            background-color: transparent;
+            font-size: 80px;
+            color: #636363;
+            letter-spacing: 5px;
+            padding: 0 30px;
+        }
+        .input-box {
+            border-bottom: 1px solid black;
+        }
+        input::-webkit-calendar-picker-indicator{
+            display: none;
+        }
+        #form-buttons {
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            input {
+                padding: 2% 17%;
+                margin: 1% 4% 5%;
+                border-radius: 20px;
+                border: 1px solid black;
+            }
+            .submit-btn:hover {
+                background: lightgreen;
+            }
+            .close-btn:hover {
+                background: rgb(255, 102, 102);
+            }
+        }
+    }
+    .checkmark {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 0;
+        border-radius: 50%;
+        display: block;
+        stroke-width: 2;
+        stroke: lightgreen;
+        stroke-miterlimit: 10;
+        box-shadow: inset 0px 0px 0px black;
+        z-index: 11;
+      }
+      
+      .checkmark__circle {
+        stroke-dasharray: 166;
+        stroke-dashoffset: 166;
+        stroke-width: 2;
+        stroke-miterlimit: 10;
+        stroke: lightgreen;
+        fill: none;
+        z-index: 11;
+      }
+      
+      .checkmark__check {
+        transform-origin: 50% 50%;
+        stroke-dasharray: 48;
+        stroke-dashoffset: 48;
+        z-index: 11;
+      }
+}
+#gallery {
+    width: 90%;
+    height: 100vh;
+    overflow: hidden;
+    background: white;
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+        font-size: 120px;
+        border-bottom: 1px solid black;
+        margin: 4% 0; 
+    }
+    .photo-rows {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 4px;
+    }
+    .photo-columns {
+        flex: 50%;
+        max-width: 50%;
+        padding: 0 4px;
+        margin-bottom: 4%;
+    }
+    .photo-columns img {
+        margin-top: 8px;
+        vertical-align: middle;
+        width: 100%;
+    }
+    @media screen and (max-width: 800px) {
+        .photo-columns {
+            flex: 50%;
+            max-width: 50%;
+        }
+    }
+    @media screen and (max-width: 600px) {
+        .photo-columns {
+            flex: 100%;
+            max-width: 100%;
         }
     }
 }

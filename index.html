@@ -25,18 +25,18 @@
         </div>
         <ul id="quick-info-cards">
             <li>
-                <img src="/resources/Sass.png">
+                <img src="/resources/iconmonstr-education-1-240.png">
                 <h1>Drift School</h1>
                 <p>Go from no to pro with our comprehensive drift shool.
                     Our instructors will make changes to occomidate your needs to ensure you leave your session knowing practical skills you can apply right away.</p>
             </li>
             <li>
-                <img src="/resources/Sass.png">
+                <img src="/resources/iconmonstr-calendar-4-240.png">
                 <h1>Drift Events</h1>
                 <p>Sideways University is known for the high end drift events that we host. We give everyone the opertunity to prove themselves on our custom built, competition tracks. We also offer the ability for you to host an event using our resources.</p>
             </li>
             <li>
-                <img src="/resources/Sass.png">
+                <img src="/resources/iconmonstr-car-3-240.png">
                 <h1>Drift Cars</h1>
                 <p>We offer a small selection of highly tuned drift cars. While the selection isn’t massive, we are sure you will enjoy the cars we have to offer. Each car is unique in how it handles and will give you another reason to keep practicing your desired choice.</p>
             </li>
@@ -119,7 +119,7 @@
             <h1>Host An Event</h1>
             <div>
                 <p>Sideways university has hosted the biggest drift events los santos has ever seen. Now we offer the ability for you to host your very own drift event using our resources. We offer a range of different packages for you to succeed in hosting an event the city wont forget. See our available packages below.</p>
-                <button>Host An Event</button>
+                <button id="host-an-event-btn" data-active="#form">Schedule A Meeting</button>
             </div>
         </div>
         <div id="packages">
@@ -179,6 +179,57 @@
                 </li>
             </ul>
         </div>
+    </section>
+
+    <section id="form">
+        <div class="host-an-event-form">
+            <h1>Schedule A Meeting</h1>
+            <script type="text/javascript">var submitted=false;</script>
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) (window.location='#');"></iframe>
+            <form id="host-an-event-form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdVFjbqOXYWh8PFKZpmB6__4VKgMA8Cwj5BMdym-rE4tLxYRQ/formResponse" method="post" target="hidden_iframe"
+            onsubmit="submitted=true;">
+                <input id="name" class="input-box" name="entry.1681273849" type="text" placeholder="Name" required>
+                <input id="number" class="input-box" name="entry.394294590" type="text" placeholder="Number" required>
+                <input id="date" class="input-box date" name="entry.1923331625" type="date" placeholder="Date" required>
+                <select id="package-select" class="input-box" name="entry.427379441" type="text" placeholder="Package" max="2021-12-31" maxlength="4" required>
+                    <option value="Basic Package">Basic Package</option>
+                    <option value="Standard Package">Standard Package</option>
+                    <option value="Premium Package">Premium Package</option>
+                </select>
+                <div id="form-buttons">
+                    <input class="input-submit submit-btn" type="submit" value="Send">
+                    <input class="input-submit close-btn" type="button" value="Close" data-active="#form">
+                </div>
+            </form>    
+        </div>
+        <div class="check">
+            <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <h1>Gallery</h1>
+        <div class="photo-rows"> 
+            <div class="photo-columns">
+                <img src="https://cdn.discordapp.com/attachments/878415281758826528/911134773932589056/unknown_2.png" style="width:100%">
+                <img src="https://cdn.discordapp.com/attachments/673934775400136749/909634925471354980/unknown_3.png" style="width:100%">
+                <img src="https://cdn.discordapp.com/attachments/673934775400136749/908836203783155722/unknown.png" style="width:100%">
+                <img src="https://cdn.discordapp.com/attachments/673934775400136749/906854138510471228/2021-11-07_10h54_47.png" style="width:100%">
+                <img src="https://cdn.discordapp.com/attachments/673934775400136749/910640147723341854/unknown.png" style="width:100%">
+                <img src="https://cdn.discordapp.com/attachments/673934775400136749/909265922743754782/unknown.png" style="width:100%">
+                <img src="https://cdn.discordapp.com/attachments/673934775400136749/908835386082611241/unknown.png" style="width:100%">
+                <img src="https://i.imgur.com/fKpzWBJ.png" style="width:100%">
+            </div>
+            <div class="photo-columns">
+                <img src="https://cdn.discordapp.com/attachments/878415281758826528/906902102205399091/unknown.png" style="width:100%">
+                <img src="https://cdn.discordapp.com/attachments/673934775400136749/909567355141632000/unknown.png" style="width:100%">
+                <img src="https://cdn.discordapp.com/attachments/673934775400136749/908836154097418270/unknown.png" style="width:100%">
+                <img src="https://cdn.discordapp.com/attachments/673934775400136749/904301219621765130/unknown.png" style="width:100%">
+                <img src="https://cdn.discordapp.com/attachments/673934775400136749/909886154868916315/unknown.png" style="width:100%">
+                <img src="https://cdn.discordapp.com/attachments/673934775400136749/909253484208062524/2021-11-14_02h04_45.png" style="width:100%">
+                <img src="https://cdn.discordapp.com/attachments/673934775400136749/908812879698993212/unknown.png" style="width:100%">
+            </div>  
+          </div>
     </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
