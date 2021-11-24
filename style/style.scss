@@ -157,12 +157,12 @@ nav {
 }
 #pricing {
     width: 90%;
-    height: 100vh;
     background: white;
     position: absolute;
     z-index: -1;
     opacity: 0;
     #car-pricing {
+        height: fit-content;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -173,7 +173,7 @@ nav {
         }
         ul {
             width: 100%;
-            height: 1080px;
+            height: 100%;
             li {
                 display: flex;
                 flex-direction: column;
@@ -217,6 +217,132 @@ nav {
                     text-transform: none; 
                 }
             }
+        }
+    }
+    #school-pricing {
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1 {
+            font-size: 100px;
+            border-bottom: 1px solid black;
+            margin: 5% 0;
+        }
+        h2 {
+            font-size: 100px;
+            font-weight: 200;
+        }
+    }
+}
+#hosting {
+    width: 90%;
+    background: white;
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    #host-an-event {
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1 {
+            font-size: 100px;
+            border-bottom: 1px solid black;
+            margin: 5% 0;
+        }
+        div {
+            background-color: #ECECEC;
+            border: 1px solid #636363;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            p {
+                font-size: 75px;
+                font-weight: 200;
+                letter-spacing: 5px;
+                text-transform: none;
+                padding: 2%;
+                text-align: center;
+                color: #636363;
+            }
+            button {
+                font-size: 80px;
+                font-weight: 200;
+                letter-spacing: 3px;
+                padding: 15px 10%;
+                margin-bottom: 2%;
+                background-color: #636363;
+                color: white;
+                border: 1px solid transparent;
+                border-radius: 20px;
+                transition: 0.1s;
+            }
+            button:hover {
+                background-color: #ECECEC;
+                border: 1px solid #636363;
+                color: #636363;
+            }
+        }
+    }
+    #packages {
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        div {
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        h1 {
+            font-size: 100px;
+            border-bottom: 1px solid black;
+            margin: 5% 0;
+        }
+        ul {
+            list-style: none;
+            text-align: center;
+            .package {
+                background-color: #636363;
+                color: white;
+                padding: 5%;
+                width: 1200px;
+                height: 1200px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                h2 {
+                    font-size: 400px;
+                    font-weight: 200;
+                }
+                h3 {
+                    font-size: 150px;
+                    font-weight: 200;
+                    letter-spacing: 10px;
+                }
+            }
+            .package-details {
+                border: 1px solid #636363;
+                width: 1200px;
+                p {
+                    font-size: 100px;
+                    letter-spacing: 7px;
+                    padding: 3%;
+                }
+            }
+        }
+    }
+    #tracks {
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1 {
+            font-size: 100px;
+            border-bottom: 1px solid black;
+            margin: 5% 0;
         }
     }
 }

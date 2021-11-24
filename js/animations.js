@@ -1,5 +1,5 @@
 //Page Transitions
-const pageList = {home:"#home", pricing:"#pricing", host_an_event:"#host-an-event", gallery:"#gallery"};
+const pageList = {home:"#home", pricing:"#pricing", host_an_event:"#hosting", gallery:"#gallery"};
 const pages = Object.values(pageList)
 function closePages(){
 for (var num = 0; num <= 5; num++){

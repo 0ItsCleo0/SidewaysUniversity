@@ -245,7 +245,6 @@ nav li {
 
 #pricing {
   width: 90%;
-  height: 100vh;
   background: white;
   position: absolute;
   z-index: -1;
@@ -253,6 +252,9 @@ nav li {
 }
 
 #pricing #car-pricing {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -273,7 +275,7 @@ nav li {
 
 #pricing #car-pricing ul {
   width: 100%;
-  height: 1080px;
+  height: 100%;
 }
 
 #pricing #car-pricing ul li {
@@ -339,6 +341,208 @@ nav li {
   letter-spacing: 10px;
   padding: 2%;
   text-transform: none;
+}
+
+#pricing #school-pricing {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#pricing #school-pricing h1 {
+  font-size: 100px;
+  border-bottom: 1px solid black;
+  margin: 5% 0;
+}
+
+#pricing #school-pricing h2 {
+  font-size: 100px;
+  font-weight: 200;
+}
+
+#hosting {
+  width: 90%;
+  background: white;
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+#hosting #host-an-event {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#hosting #host-an-event h1 {
+  font-size: 100px;
+  border-bottom: 1px solid black;
+  margin: 5% 0;
+}
+
+#hosting #host-an-event div {
+  background-color: #ECECEC;
+  border: 1px solid #636363;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#hosting #host-an-event div p {
+  font-size: 75px;
+  font-weight: 200;
+  letter-spacing: 5px;
+  text-transform: none;
+  padding: 2%;
+  text-align: center;
+  color: #636363;
+}
+
+#hosting #host-an-event div button {
+  font-size: 80px;
+  font-weight: 200;
+  letter-spacing: 3px;
+  padding: 15px 10%;
+  margin-bottom: 2%;
+  background-color: #636363;
+  color: white;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+#hosting #host-an-event div button:hover {
+  background-color: #ECECEC;
+  border: 1px solid #636363;
+  color: #636363;
+}
+
+#hosting #packages {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#hosting #packages div {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+#hosting #packages h1 {
+  font-size: 100px;
+  border-bottom: 1px solid black;
+  margin: 5% 0;
+}
+
+#hosting #packages ul {
+  list-style: none;
+  text-align: center;
+}
+
+#hosting #packages ul .package {
+  background-color: #636363;
+  color: white;
+  padding: 5%;
+  width: 1200px;
+  height: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+#hosting #packages ul .package h2 {
+  font-size: 400px;
+  font-weight: 200;
+}
+
+#hosting #packages ul .package h3 {
+  font-size: 150px;
+  font-weight: 200;
+  letter-spacing: 10px;
+}
+
+#hosting #packages ul .package-details {
+  border: 1px solid #636363;
+  width: 1200px;
+}
+
+#hosting #packages ul .package-details p {
+  font-size: 100px;
+  letter-spacing: 7px;
+  padding: 3%;
+}
+
+#hosting #tracks {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#hosting #tracks h1 {
+  font-size: 100px;
+  border-bottom: 1px solid black;
+  margin: 5% 0;
 }
 
 

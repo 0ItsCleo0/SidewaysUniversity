@@ -122,7 +122,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 var pageList = {
   home: "#home",
   pricing: "#pricing",
-  host_an_event: "#host-an-event",
+  host_an_event: "#hosting",
   gallery: "#gallery"
 };
 var pages = Object.values(pageList);
@@ -205,7 +205,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62415" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63635" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
