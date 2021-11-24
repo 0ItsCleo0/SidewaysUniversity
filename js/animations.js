@@ -106,3 +106,60 @@ $('#host-an-event-form').submit(function(e){
     document.getElementById("date").value = "";
     document.getElementById("package-select").value = "";
 });
+
+// Handles Start Menu
+$("#start-menu-btn").on("click",function(){
+    startMenu = document.getElementById('start-menu')
+    startMenu.classList.toggle('start-inactive')
+});
+
+// Goes Back To Home Page
+$('#back-to-safety').on('click', () => {
+    window.location.href = "index.html";
+})
+
+// Dark Mode
+let body = document.body
+let contactUsTitle = document.getElementById('contact-us-title')
+let title = document.querySelectorAll('#title')
+let nav = document.getElementById('navbar')
+let logo = document.getElementById('logo')
+let inactiveElements = document.querySelectorAll('#no-dark-mode')
+
+$(document).ready(function() {
+    if (window.localStorage.getItem("DarkMode") == null) {
+      localStorage.setItem("DarkMode", false);
+    } else if (localStorage.getItem("DarkMode") == "false") {
+        ActivateLightMode()
+    } else {
+        ActivateDarkMode()
+    }
+})
+
+$('#dark-mode').on('click', () => {
+    let DarkMode = localStorage.getItem("DarkMode")
+      if (DarkMode == "false") {
+        localStorage.setItem("DarkMode", true)
+        ActivateDarkMode()
+      } else {
+        localStorage.setItem("DarkMode", false)
+        ActivateLightMode()
+      }
+})
+
+function ActivateDarkMode() {
+    $(body).css({'background-color': '#232323', 'color': '#ECECEC'})
+    $(contactUsTitle).css('border-bottom', '1px solid #ECECEC')
+    $(title).css('border-bottom', '1px solid #ECECEC')
+    $(nav).css('border-bottom', '1px solid #ECECEC')
+    $(logo).attr('src', 'https://cdn.discordapp.com/attachments/903341036573708311/913164498850967622/SidewaysUniversityLogoWhite.png')
+    $(inactiveElements).css('color', 'black')
+}
+
+function ActivateLightMode() {
+    $(body).css({'background-color': 'white', 'color': 'black'})
+    $(contactUsTitle).css('border-bottom', '1px solid black')
+    $(title).css('border-bottom', '1px solid black')
+    $(logo).attr('src', 'https://cdn.discordapp.com/attachments/903341036573708311/913164498670587904/SidewaysUniversityLogo.png')
+    $(nav).css('border-bottom', '1px solid black')
+}

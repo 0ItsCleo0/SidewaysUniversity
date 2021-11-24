@@ -292,7 +292,66 @@ $('#host-an-event-form').submit(function (e) {
   document.getElementById("number").value = "";
   document.getElementById("date").value = "";
   document.getElementById("package-select").value = "";
+}); // Handles Start Menu
+
+$("#start-menu-btn").on("click", function () {
+  startMenu = document.getElementById('start-menu');
+  startMenu.classList.toggle('start-inactive');
+}); // Goes Back To Home Page
+
+$('#back-to-safety').on('click', function () {
+  window.location.href = "index.html";
+}); // Dark Mode
+
+var body = document.body;
+var contactUsTitle = document.getElementById('contact-us-title');
+var title = document.querySelectorAll('#title');
+var nav = document.getElementById('navbar');
+var logo = document.getElementById('logo');
+var inactiveElements = document.querySelectorAll('#no-dark-mode');
+$(document).ready(function () {
+  if (window.localStorage.getItem("DarkMode") == null) {
+    localStorage.setItem("DarkMode", false);
+  } else if (localStorage.getItem("DarkMode") == "false") {
+    ActivateLightMode();
+  } else {
+    ActivateDarkMode();
+  }
 });
+$('#dark-mode').on('click', function () {
+  var DarkMode = localStorage.getItem("DarkMode");
+
+  if (DarkMode == "false") {
+    localStorage.setItem("DarkMode", true);
+    ActivateDarkMode();
+  } else {
+    localStorage.setItem("DarkMode", false);
+    ActivateLightMode();
+  }
+});
+
+function ActivateDarkMode() {
+  $(body).css({
+    'background-color': '#232323',
+    'color': '#ECECEC'
+  });
+  $(contactUsTitle).css('border-bottom', '1px solid #ECECEC');
+  $(title).css('border-bottom', '1px solid #ECECEC');
+  $(nav).css('border-bottom', '1px solid #ECECEC');
+  $(logo).attr('src', 'https://cdn.discordapp.com/attachments/903341036573708311/913164498850967622/SidewaysUniversityLogoWhite.png');
+  $(inactiveElements).css('color', 'black');
+}
+
+function ActivateLightMode() {
+  $(body).css({
+    'background-color': 'white',
+    'color': 'black'
+  });
+  $(contactUsTitle).css('border-bottom', '1px solid black');
+  $(title).css('border-bottom', '1px solid black');
+  $(logo).attr('src', 'https://cdn.discordapp.com/attachments/903341036573708311/913164498670587904/SidewaysUniversityLogo.png');
+  $(nav).css('border-bottom', '1px solid black');
+}
 },{}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -321,7 +380,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53628" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63930" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

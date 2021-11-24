@@ -117,74 +117,86 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
+})({"js/password.js":[function(require,module,exports) {
+// Password Counter
+schoolClicks = 0;
+eventClicks = 0;
+carClicks = 0;
+$('#school').on('click', function () {
+  schoolClicks += 1;
+  checkPassword();
+});
+$('#event').on('click', function () {
+  eventClicks += 1;
+  checkPassword();
+});
+$('#car').on('click', function () {
+  carClicks += 1;
+  checkPassword();
+}); // Set Password Here
 
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
+function checkPassword() {
+  if (schoolClicks == 2 && eventClicks == 3 && carClicks == 1) {
+    window.location.href = "underground.html";
   }
-
-  return bundleURL;
 }
 
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
+$('.page-open-btn').on('click', function () {
+  schoolClicks = 0;
+  eventClicks = 0;
+  carClicks = 0;
+}); // Handles The Underground Login Page
 
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
-
-  return '/';
-}
-
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)?\/[^/]+(?:\?.*)?$/, '$1') + '/';
-}
-
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-
-  newLink.onload = function () {
-    link.remove();
-  };
-
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
+back = document.getElementById('back');
+$(back).on('click', function () {
+  window.location.href = "index.html";
+});
+username = document.getElementById('username');
+password = document.getElementById('password');
+loginBTN = document.getElementById('login');
+$(loginBTN).on('click', function () {
+  if (username.value == 'admin' && password.value == 'password') {
+    var transition = gsap.timeline({
+      defaults: {
+        ease: "power1.out"
       }
-    }
-
-    cssTimeout = null;
-  }, 50);
-}
-
-module.exports = reloadCSS;
-},{"./bundle-url":"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+    });
+    transition.to("#login-page", {
+      opacity: "0",
+      duration: 0.5
+    });
+    transition.to("#login-page", {
+      overflow: "hidden",
+      duration: 0.1
+    });
+    transition.to("#login-page", {
+      zIndex: "-1",
+      duration: 0.1
+    });
+    transition.to("#main-desktop", {
+      zIndex: "2",
+      duration: 0.1
+    });
+    transition.to("#main-desktop", {
+      overflow: "visible",
+      duration: 0.1
+    });
+    transition.to("#main-desktop", {
+      opacity: "1",
+      duration: 0.5
+    });
+  } else {
+    username.value = '';
+    password.value = '';
+  }
+});
+$('#password' && '#username').keypress(function (e) {
+  if (e.which == 13) {
+    $('#login').trigger('click');
+    return false;
+  }
+});
+},{}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -212,7 +224,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65468" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63930" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -388,5 +400,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
-//# sourceMappingURL=/index.js.map
+},{}]},{},["../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/password.js"], null)
+//# sourceMappingURL=/password.5f98c350.js.map
