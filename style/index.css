@@ -186,6 +186,11 @@ nav .page-open-btn {
           align-items: center;
 }
 
+#home #contact-info img {
+  border-radius: 50%;
+  width: 50%;
+}
+
 #home #contact-info h1 {
   font-size: 120px;
   border-bottom: 1px solid black;
