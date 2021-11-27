@@ -292,15 +292,6 @@ $('#host-an-event-form').submit(function (e) {
   document.getElementById("number").value = "";
   document.getElementById("date").value = "";
   document.getElementById("package-select").value = "";
-}); // Handles Start Menu
-
-$("#start-menu-btn").on("click", function () {
-  startMenu = document.getElementById('start-menu');
-  startMenu.classList.toggle('start-inactive');
-}); // Goes Back To Home Page
-
-$('#back-to-safety').on('click', function () {
-  window.location.href = "index.html";
 }); // Dark Mode
 
 var body = document.body;
@@ -380,7 +371,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54379" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50949" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
