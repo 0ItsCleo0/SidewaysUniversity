@@ -107,6 +107,17 @@ $('#host-an-event-form').submit(function(e){
     document.getElementById("package-select").value = "";
 });
 
+// Handles Start Menu
+$("#start-menu-btn").on("click",function(){
+    startMenu = document.getElementById('start-menu')
+    startMenu.classList.toggle('start-inactive')
+});
+
+// Goes Back To Home Page
+$('#back-to-safety').on('click', () => {
+    window.location.href = "index.html";
+})
+
 // Dark Mode
 let body = document.body
 let contactUsTitle = document.getElementById('contact-us-title')
