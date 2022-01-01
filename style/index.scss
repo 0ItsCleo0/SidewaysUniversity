@@ -153,21 +153,6 @@ nav {
             }
         }
     }
-    #location {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        h1 {
-            font-size: 120px;
-            border-bottom: 1px solid black;
-        }
-        img {
-            width: 80%;
-            margin: 5% 0;
-            border: 1px solid black;
-            border-radius: 30px;
-        }
-    }
 }
 #pricing {
     width: 90%;
