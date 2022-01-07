@@ -234,31 +234,6 @@ nav .page-open-btn {
   border-bottom: none;
 }
 
-#home #location {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-#home #location h1 {
-  font-size: 120px;
-  border-bottom: 1px solid black;
-}
-
-#home #location img {
-  width: 80%;
-  margin: 5% 0;
-  border: 1px solid black;
-  border-radius: 30px;
-}
-
 #pricing {
   width: 90%;
   height: 100vh;
